@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>
+        To Upper Case
+    </h1>
+    <form method="POST">
+        {% if mainform %}
+        {{ mainform.csrf_token }}
+        <div>
+            {{ mainform.text() }}
+            <input type="submit" name='submit_button' value='Submit'>
+        </div>
+        {% endif %}
+        {% if upper_cased %}
+            <div>
+                <h3>{{ upper_cased }}</h3>
+            </div>
+        {% endif %}
+    </form>
+</body>
+</html>
