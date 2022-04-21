@@ -93,3 +93,4 @@ jobs:
       - name: Print message for CD finish
         run: echo "CD Pipeline part finished successfully!"
 
+
